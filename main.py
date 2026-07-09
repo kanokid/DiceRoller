@@ -658,19 +658,19 @@ dice8roll4 = Group (
 )
 
 dice8roll5 = Group (
-    Circle(160, 160, 10),
-    Circle(160, 230, 10),
-    Circle(83,193,10),
-    Circle(225, 160, 10),
-    Circle(225, 230, 10),
+    Circle(160, 290, 10),
+    Circle(160, 360, 10),
+    Circle(193, 323,10),
+    Circle(225, 290, 10),
+    Circle(225, 360, 10),
 )
 dice8roll6 = Group (
-    Circle(295,160, 10),
-    Circle(295, 230, 10),
-    Circle(295, 195, 10),
-    Circle(350,195,10),
-    Circle(350, 160, 10),
-    Circle(350, 230, 10),
+    Circle(165,290, 10),
+    Circle(165, 360, 10),
+    Circle(165, 325, 10),
+    Circle(220, 325,10),
+    Circle(220, 290, 10),
+    Circle(220, 360, 10),
 )
 def rollDice8():
     dice8roll1.visible = False
@@ -679,8 +679,7 @@ def rollDice8():
     dice8roll4.visible = False
     dice8roll5.visible = False
     dice8roll6.visible = False
-    #dice8.number = randrange(1, 7)
-    dice8.number = 4
+    dice8.number = randrange(1, 7)
     if dice8.number == 1:
         dice8roll1.visible = True
         dice8roll2.visible = False
@@ -724,43 +723,43 @@ def rollDice8():
         dice8roll4.visible = False
         dice8roll5.visible = False
         dice8roll6.visible = True
-'''
+
 # Dice 9
-dice9 = Rect(260,130,125,125,border="black",fill=None)
-dice9roll1 = Circle(323,193,20)
+dice9 = Rect(260,260,125,125,border="black",fill=None)
+dice9roll1 = Circle(323,323,20)
 
 dice9roll2 = Group (
-Circle(300,170,13),
-    Circle(345,215,13),
+Circle(300,300,13),
+    Circle(345,345,13),
 )
 
 dice9roll3 = Group (
-    Circle(300,215,10),
-    Circle(345,215,10),
-    Circle(322,170,10),
+    Circle(300,345,10),
+    Circle(345,345,10),
+    Circle(322,300,10),
 )
 
 dice9roll4 = Group (
-    Circle(300,170,10),
-    Circle(300,220,10),
-    Circle(345,170,10),
-    Circle(345,220,10),
+    Circle(300,300,10),
+    Circle(300,350,10),
+    Circle(345,300,10),
+    Circle(345,350,10),
 )
 
 dice9roll5 = Group (
-    Circle(290, 160, 10),
-    Circle(290, 230, 10),
-    Circle(323,193,10),
-    Circle(355, 160, 10),
-    Circle(355, 230, 10),
+    Circle(290, 290, 10),
+    Circle(290, 360, 10),
+    Circle(323,323,10),
+    Circle(355, 290, 10),
+    Circle(355, 360, 10),
 )
 dice9roll6 = Group (
-    Circle(295,160, 10),
-    Circle(295, 230, 10),
-    Circle(295, 195, 10),
-    Circle(350,195,10),
-    Circle(350, 160, 10),
-    Circle(350, 230, 10),
+    Circle(295,290, 10),
+    Circle(295, 360, 10),
+    Circle(295, 325, 10),
+    Circle(350,325,10),
+    Circle(350, 290, 10),
+    Circle(350, 360, 10),
 )
 def rollDice9():
     dice9roll1.visible = False
@@ -813,7 +812,8 @@ def rollDice9():
         dice9roll4.visible = False
         dice9roll5.visible = False
         dice9roll6.visible = True
-'''
+
+Label("Left click to reroll!", 200,405, size=20)
 def rollDice():
     rollDice1()
     rollDice2()
@@ -823,13 +823,11 @@ def rollDice():
     rollDice6()
     rollDice7()
     rollDice8()
-    #rollDice9()
+    rollDice9()
 def onMousePress(mouseX, mouseY, button):
-    if button == 0:
+    if button >= 0:
         rollDice()
 
-    elif button == 1:
-        var.width = 250
 rollDice()
 
 cmu_graphics.run()
