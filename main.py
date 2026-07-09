@@ -547,41 +547,41 @@ def rollDice6():
         dice6roll5.visible = False
         dice6roll6.visible = True
 # Dice 7
-dice7 = Rect(130,260,125,125,border="black",fill=None)
-dice7roll1 = Circle(323,193,20)
+dice7 = Rect(0,260,125,125,border="black",fill=None)
+dice7roll1 = Circle(63,323,20)
 
 dice7roll2 = Group (
-Circle(40,170,13),
-    Circle(85,215,13),
+Circle(40,300,13),
+    Circle(85,345,13),
 )
 
 dice7roll3 = Group (
-    Circle(300,215,10),
-    Circle(345,215,10),
-    Circle(322,170,10),
+    Circle(40,345,10),
+    Circle(85,345,10),
+    Circle(62,300,10),
 )
 
 dice7roll4 = Group (
-    Circle(300,170,10),
-    Circle(300,220,10),
-    Circle(345,170,10),
-    Circle(345,220,10),
+    Circle(40,300,10),
+    Circle(40,350,10),
+    Circle(85,300,10),
+    Circle(85,350,10),
 )
 
 dice7roll5 = Group (
-    Circle(290, 160, 10),
-    Circle(290, 230, 10),
-    Circle(323,193,10),
-    Circle(355, 160, 10),
-    Circle(355, 230, 10),
+    Circle(30, 290, 10),
+    Circle(30, 350, 10),
+    Circle(63,323,10),
+    Circle(95, 290, 10),
+    Circle(95, 350, 10),
 )
 dice7roll6 = Group (
-    Circle(295,160, 10),
-    Circle(295, 230, 10),
-    Circle(295, 195, 10),
-    Circle(350,195,10),
-    Circle(350, 160, 10),
-    Circle(350, 230, 10),
+    Circle(35,290, 10),
+    Circle(35, 360, 10),
+    Circle(35, 325, 10),
+    Circle(90,325,10),
+    Circle(90, 290, 10),
+    Circle(90, 360, 10),
 )
 def rollDice7():
     dice7roll1.visible = False
@@ -634,34 +634,35 @@ def rollDice7():
         dice7roll4.visible = False
         dice7roll5.visible = False
         dice7roll6.visible = True
+
 # Dice 8
-dice8 = Rect(260,130,125,125,border="black",fill=None)
-dice8roll1 = Circle(323,193,20)
+dice8 = Rect(130,260,125,125,border="black",fill=None)
+dice8roll1 = Circle(193,323,20)
 
 dice8roll2 = Group (
-Circle(300,170,13),
-    Circle(345,215,13),
+Circle(170,300,13),
+    Circle(215,335,13),
 )
 
 dice8roll3 = Group (
-    Circle(300,215,10),
-    Circle(345,215,10),
-    Circle(322,170,10),
+    Circle(170,345,10),
+    Circle(215,345,10),
+    Circle(192,300,10),
 )
 
 dice8roll4 = Group (
-    Circle(300,170,10),
-    Circle(300,220,10),
-    Circle(345,170,10),
-    Circle(345,220,10),
+    Circle(170,300,10),
+    Circle(170,350,10),
+    Circle(215,300,10),
+    Circle(215,350,10),
 )
 
 dice8roll5 = Group (
-    Circle(290, 160, 10),
-    Circle(290, 230, 10),
-    Circle(323,193,10),
-    Circle(355, 160, 10),
-    Circle(355, 230, 10),
+    Circle(160, 160, 10),
+    Circle(160, 230, 10),
+    Circle(83,193,10),
+    Circle(225, 160, 10),
+    Circle(225, 230, 10),
 )
 dice8roll6 = Group (
     Circle(295,160, 10),
@@ -678,7 +679,8 @@ def rollDice8():
     dice8roll4.visible = False
     dice8roll5.visible = False
     dice8roll6.visible = False
-    dice8.number = randrange(1, 7)
+    #dice8.number = randrange(1, 7)
+    dice8.number = 4
     if dice8.number == 1:
         dice8roll1.visible = True
         dice8roll2.visible = False
@@ -722,6 +724,7 @@ def rollDice8():
         dice8roll4.visible = False
         dice8roll5.visible = False
         dice8roll6.visible = True
+'''
 # Dice 9
 dice9 = Rect(260,130,125,125,border="black",fill=None)
 dice9roll1 = Circle(323,193,20)
@@ -810,7 +813,7 @@ def rollDice9():
         dice9roll4.visible = False
         dice9roll5.visible = False
         dice9roll6.visible = True
-
+'''
 def rollDice():
     rollDice1()
     rollDice2()
@@ -820,7 +823,7 @@ def rollDice():
     rollDice6()
     rollDice7()
     rollDice8()
-    rollDice9()
+    #rollDice9()
 def onMousePress(mouseX, mouseY, button):
     if button == 0:
         rollDice()
